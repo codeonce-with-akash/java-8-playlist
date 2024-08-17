@@ -1,0 +1,11 @@
+package com.java8;
+
+import com.java8.functional.interf.Calculator;
+
+public class LambdaExAndFunctionalInterafaceTest {
+
+	public static void main(String[] args) {
+		Calculator cal = () -> {System.out.println("Calculater started!");};
+	}
+
+}

@@ -1,7 +1,9 @@
 package com.java8.service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.java8.dao.BookDaoImpl;
@@ -36,6 +38,16 @@ public class BookServiceImpl implements IBookService {
 					.sorted((book1, book2) -> (book1.getBookPrice() > book2.getBookPrice()) ? -1 : (book1.getBookPrice() < book2.getBookPrice()) ? 1 :0)
 					.skip(input-1)
 					.findFirst().get();
+	}
+	
+	@Override
+	public Book findBookHavingNthHighestPages(int input) {
+		 List<Book> books = bookDao.findAllBooks();
+		 return books.stream()
+				 .sorted((b1, b2) -> (b1.getBookPages() > b2.getBookPages()) ? -1 : (b1.getBookPages() > b2.getBookPages()) ? 1 :0 )
+				 .skip(input-1)
+				 .findFirst()
+				 .get();
 	}
 	
 }

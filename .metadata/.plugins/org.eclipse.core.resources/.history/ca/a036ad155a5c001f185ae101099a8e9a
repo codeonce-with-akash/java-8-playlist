@@ -1,0 +1,5 @@
+package com.java8.dao;
+
+public class BookDaoImpl implements IBookDao {
+	
+}

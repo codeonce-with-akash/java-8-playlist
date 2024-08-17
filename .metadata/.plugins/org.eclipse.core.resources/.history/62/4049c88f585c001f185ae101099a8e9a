@@ -1,0 +1,13 @@
+package com.java8;
+
+import com.java8.functional.interf.Calculator;
+
+public class LambdaExAndFunctionalInterafaceTest {
+
+	public static void main(String[] args) {
+		//Calculator cal = () -> System.out.println("Calculater switched on!");
+		Calculator cal = (num1, num2) -> System.out.println("Sum : "+ (num1 + num2));
+		cal.sum(20, 20);
+	}
+
+}

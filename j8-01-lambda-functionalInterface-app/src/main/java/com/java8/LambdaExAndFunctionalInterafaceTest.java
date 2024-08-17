@@ -1,6 +1,8 @@
 package com.java8;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.java8.functional.interf.Calculator;
 import com.java8.model.Book;
@@ -35,7 +37,7 @@ public class LambdaExAndFunctionalInterafaceTest {
 
 		List<Book> allBooksWithSorting = bookService.findAllBooksWithSorting();
 		System.out.println("All books details with sorting based on id : ");
-		allBooksWithSorting.forEach(System.out::println);
+		//allBooksWithSorting.forEach(System.out::println);
 
 		System.out.println("---------------------------------------");
 
@@ -46,5 +48,20 @@ public class LambdaExAndFunctionalInterafaceTest {
 			e.printStackTrace();
 		}
 		System.out.println("2nd highest book price details is : " + book);
+
+		System.out.println("---------------------------------------");
+		
+		book = bookService.findBookHavingNthHighestPages(2);
+		System.out.println("Second Highest Pages Book: "+ book);
+	
+		System.out.println("---------------------------------------");
+		
+		/** Nth largest string from string array **/
+		String[] strArray = {"java", "springboot", "microservices", "amazonwebservices"};
+		String str = Arrays.stream(strArray)
+				.sorted((s1, s2) -> s1.length() > s2.length()? -1 : s1.length()<s2.length()?1:0)
+				.skip(3)
+				.findFirst().get();
+		System.out.println(str);
 	}
 }

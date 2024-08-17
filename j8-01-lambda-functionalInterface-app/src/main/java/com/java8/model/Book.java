@@ -11,5 +11,5 @@ public class Book {
 	private Long bookId;
 	private String bookName;
 	private Double bookPrice;
-	private Long bookPages;
+	private long bookPages;
 }

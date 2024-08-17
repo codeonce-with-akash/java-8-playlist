@@ -8,4 +8,5 @@ public interface IBookService {
 	List<Book> findAllBooksWithoutSorting();
 	List<Book> findAllBooksWithSorting();
 	Book findBookHavingNthHighestPrice(int input);
+	Book findBookHavingNthHighestPages(int input);
 }
