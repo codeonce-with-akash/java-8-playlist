@@ -1,9 +1,0 @@
-package com.java8.functional.interf;
-
-@FunctionalInterface
-public interface Calculator {
-	//1. without input 
-	//void switchOn();
-	
-	//2. with input
-}

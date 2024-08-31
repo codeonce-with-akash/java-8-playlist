@@ -24,7 +24,7 @@ public class WhyOptional {
 		//System.out.println(emptyOptional.get());	// java.util.NoSuchElementException: No value present
 		
 		//2. Create Optional class object using of() method
-		//Optional<String> ofOptional = Optional.of(newCustomer.getEmail());	// in case of null value: java.lang.NullPointerException
+		Optional<String> ofOptional = Optional.of(newCustomer.getEmail());	// in case of null value: java.lang.NullPointerException
 		//System.out.println(ofOptional.get());
 		
 		//3. Create Optional class object using ofNullable() method

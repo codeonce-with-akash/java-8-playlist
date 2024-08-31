@@ -9,7 +9,6 @@ public class OptionalStreamCodeTest {
 	
 	public static String findCutomerByEmail(String email) {
 		List<Customer> list = EkartDatabase.getAll();
-		
 		return list.stream()
 				.filter(customer -> customer.getEmail().equalsIgnoreCase(email))
 				.map(customer -> customer.getEmail().toUpperCase())

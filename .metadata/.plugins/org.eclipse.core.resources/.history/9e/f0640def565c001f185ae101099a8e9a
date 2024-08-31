@@ -1,6 +1,0 @@
-package com.java8.functional.interf;
-
-@FunctionalInterface
-public interface Calculator {
-	void switchOn();
-}

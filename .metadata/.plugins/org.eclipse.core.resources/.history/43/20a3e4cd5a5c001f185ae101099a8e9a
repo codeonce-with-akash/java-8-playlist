@@ -1,9 +1,0 @@
-package com.java8.functional.interf;
-
-import java.util.List;
-
-import com.java8.model.Book;
-
-public interface IBookService {
-	List<Book> findAllBooksWithoutSorting();
-}
